@@ -2,7 +2,7 @@ import FluentSQLite
 import Vapor
 import Foundation
 
-final class Employee: SQLiteModel {
+final class Employee: SQLiteModel, Codable {
   
   var id: Int?
   var firstName: String
@@ -32,8 +32,6 @@ final class Employee: SQLiteModel {
 extension Employee: Migration {}
 
 extension Employee: Content {}
-
-extension Employee: Codable {}
 
 extension Employee: Parameter {}
 
