@@ -1,7 +1,7 @@
 import FluentSQLite
 import Vapor
 
-final class Training: SQLiteModel {
+final class Training: SQLiteModel, Codable {
   
   var id: Int?
   var name: String
@@ -18,7 +18,6 @@ extension Training: Migration {}
 
 extension Training: Content {}
 
-extension Training: Codable {}
 
 extension Training: Parameter {}
 

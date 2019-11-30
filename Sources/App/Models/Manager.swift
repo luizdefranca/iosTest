@@ -3,7 +3,7 @@ import Vapor
 import Foundation
 import Authentication
 
-final class Manager: SQLiteModel {
+final class Manager: SQLiteModel, Codable {
   
   var id: Int?
   var firstName: String
@@ -22,8 +22,6 @@ final class Manager: SQLiteModel {
 extension Manager: Migration {}
 
 extension Manager: Content {}
-
-extension Manager: Codable {}
 
 extension Manager: Parameter {}
 
